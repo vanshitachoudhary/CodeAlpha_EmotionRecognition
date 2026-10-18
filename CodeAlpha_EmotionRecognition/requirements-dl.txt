@@ -1,0 +1,3 @@
+# Deep models (CNN / BiLSTM / CNN-BiLSTM). Windows/Mac laptop:  pip install -r requirements-dl.txt
+# Streamlit Cloud / Docker (Linux): replace 'tensorflow' with 'tensorflow-cpu'
+tensorflow>=2.15,<2.21

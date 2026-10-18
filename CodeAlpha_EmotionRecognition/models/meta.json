@@ -1,0 +1,98 @@
+{
+  "classes": [
+    "angry",
+    "disgust",
+    "fear",
+    "happy",
+    "neutral",
+    "sad",
+    "surprise"
+  ],
+  "sr": 16000,
+  "duration": 3.0,
+  "best": "SVM (RBF)",
+  "best_classical": "SVM (RBF)",
+  "models": {
+    "Logistic Regression": {
+      "kind": "sklearn",
+      "file": "logistic_regression.joblib",
+      "val_f1": 0.46837622767623505,
+      "val_acc": 0.45,
+      "test_f1": 0.4474995486871469,
+      "test_acc": 0.4375
+    },
+    "SVM (RBF)": {
+      "kind": "sklearn",
+      "file": "svm_rbf.joblib",
+      "val_f1": 0.49546318719638366,
+      "val_acc": 0.5166666666666667,
+      "test_f1": 0.5163293615050055,
+      "test_acc": 0.5333333333333333
+    },
+    "Random Forest": {
+      "kind": "sklearn",
+      "file": "random_forest.joblib",
+      "val_f1": 0.4530935896536556,
+      "val_acc": 0.4666666666666667,
+      "test_f1": 0.46413702713208416,
+      "test_acc": 0.475
+    }
+  },
+  "ci": {
+    "accuracy": [
+      0.5333333333333333,
+      0.4666666666666667,
+      0.5916666666666667
+    ],
+    "macro_f1": [
+      0.5163293615050055,
+      0.446493693577582,
+      0.5728563738053395
+    ]
+  },
+  "per_class_f1": {
+    "angry": 0.6229508196721312,
+    "disgust": 0.5357142857142857,
+    "fear": 0.4266666666666667,
+    "happy": 0.39344262295081966,
+    "neutral": 0.7307692307692307,
+    "sad": 0.3333333333333333,
+    "surprise": 0.5714285714285714
+  },
+  "counts": {
+    "train": 1920,
+    "val": 240,
+    "test": 240,
+    "corpora": [
+      "ravdess"
+    ]
+  },
+  "subgroups": [
+    {
+      "Group": "RAVDESS (speaker-independent)",
+      "n": 240,
+      "Accuracy": 0.533,
+      "Macro-F1": 0.516
+    },
+    {
+      "Group": "Male speakers",
+      "n": 120,
+      "Accuracy": 0.45,
+      "Macro-F1": 0.416
+    },
+    {
+      "Group": "Female speakers",
+      "n": 120,
+      "Accuracy": 0.617,
+      "Macro-F1": 0.576
+    }
+  ],
+  "leaky": {
+    "model": "SVM (RBF)",
+    "random_split_accuracy": 0.675,
+    "speaker_independent_accuracy": 0.5333333333333333,
+    "random_split_f1": 0.652221212033371,
+    "speaker_independent_f1": 0.5163293615050055
+  },
+  "cross": {}
+}
